@@ -1,2 +1,11 @@
+# Python caches and other files
 __pycache__
 main.egg-info
+.mypy_cache
+.pytest_cache
+.coverage
+
+# user's vscode settings
+.vscode
+
+# more files here as needed
