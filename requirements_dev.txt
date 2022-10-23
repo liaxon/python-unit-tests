@@ -4,7 +4,7 @@
 # flake8 is an opinionated style guide that forces a consistent code style.
 # This makes code easier to read and makes git changes smaller.
 flake8==3.9.2
-# tox is used for testing Python code in multiple environments
+# tox is used for automated testing and testing in multiple Python environments
 tox==3.24.3
 # pytest is a good standard Python testing library, and can be run
 # from the command-line.

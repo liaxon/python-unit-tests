@@ -35,14 +35,49 @@ version conflicts with them.
 
 ### setup.py
 
-This file is used by `pip` and other packag managers when installing your module.
+This file is used by pip and other packag managers when installing your module.
 
 ### setup.cfg
 
-This file contains some metadata (such as author, license, and name) and some project configuration (such as `flake8` settings, `mypy` settings,
+This file contains some metadata (such as author, license, and name) and some project configuration (such as flake8 settings, mypy settings,
 and a list of packages). Apparently, the Python community is moving towards including less project configuration here., and more in `pyproject.toml`.
 
 ### pyproject.toml
 
 This contains various configurations for your project. This includes building your project (with `[build-system]`), mypy linting (with `[tool.mypy]`),
 and pytest options (with `[tool.pytest.ini_options]`). More configurations are moving to this file. It is written in the well-known TOML format.
+
+### tox.ini
+
+Configuration for running tox, including all tests and Python versions.
+
+# How do I run these tests?
+
+### Installing the environment
+
+Run `pip install -e .` from the repository root to install all packages in `requirements.txt`. Then, run `pip install -r requirements-dev.txt` to 
+install all packages in `requirements-dev.txt`. You are now set up to run the following tests.
+
+### flake8
+
+Flake8 ensures that your code has a single style. See [flake8rules.com](https://www.flake8rules.com/) for all flake8 rules.
+
+`flake8 src tst`
+
+### mypy
+
+Mypy ensures that your code uses the correct types as much as possible.
+
+`mypy src`
+
+### pytest
+
+Pytest runs your unit tests, and provides a code coverage report based on those tests. It is always a good idea to have clean unit tests.
+
+`pytest`
+
+### tox
+
+Tox can be configured to run multiple tools, and to test in multiple environments. In this project, it is configured to run the above three commands.
+
+`tox`
