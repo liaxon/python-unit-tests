@@ -27,7 +27,7 @@ files do not need to be, and only serve to clutter a git repository.
 
 This file contains all Python packages that are used when building and running the project.
 
-### requirements_dev.txt
+### requirements-dev.txt
 
 This file contains all (additional) Python packages that are used when developing the project. In particular, it includes packages for
 testing and linting. This is kept separate so that people who use your project don't need to worry about downloading these packages, or any
